@@ -6,21 +6,19 @@
       <tr>
         <th>Id</th>
         <th>Araba Adı</th>    
-        <th>Adı</th>
-        <th>Soyadı</th>           
+        <th>Müşteri Adı ve Soyadı</th>           
         <th>Şirket Adı</th>   
         <th>Kiralama Tarihi</th>
         <th>Teslim Tarihi</th>    
       </tr>
     </thead>
     <tr *ngFor="let rental of rentals">
-      <td>{{ rental.id }}</td>
-      <td>{{ rental.carName }}</td> 
-      <td>{{ rental.firstName }}</td> 
-      <td>{{ rental.lastName }}</td>      
-      <td>{{ rental.companyName }}</td>
-      <td>{{ rental.rentDate | date:'MM/dd/yyyy hh:mm'}}</td>  
-      <td>{{ rental.returnDate | date:'MM/dd/yyyy hh:mm'}}</td> 
+      <td>{{rental.id }}</td>
+      <td>{{rental.carName }}</td> 
+      <td>{{rental.firstName +" "+ rental.lastName }}</td> 
+      <td>{{rental.companyName }}</td>
+      <td>{{rental.rentDate | date:'MM/dd/yyyy hh:mm'}}</td>  
+      <td>{{rental.returnDate | date:'MM/dd/yyyy hh:mm'}}</td> 
     </tr>
   </table>
 
