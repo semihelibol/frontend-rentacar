@@ -1,4 +1,4 @@
-export interface Rental{
+export interface RentalDto{
     id:number;
     carId:number;
     carName:string;

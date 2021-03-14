@@ -1,1 +1,25 @@
-<p>customer works!</p>
+<div *ngIf="dataLoaded==false" class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Yükleniyor...</span>
+  </div>
+  <table *ngIf="dataLoaded==true" class="table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>User Id</th>    
+        <th>Adı</th>
+        <th>Soyadı</th>   
+        <th>Email Adresi</th>  
+        <th>Şirket Adı</th>   
+      </tr>
+    </thead>
+    <tr *ngFor="let customer of customers">
+      <td>{{ customer.id }}</td>
+      <td>{{ customer.userId }}</td> 
+      <td>{{ customer.firstName }}</td> 
+      <td>{{ customer.lastName }}</td> 
+      <td>{{ customer.email }}</td>  
+      <td>{{ customer.companyName }}</td>
+    </tr>
+  </table>
+
+  

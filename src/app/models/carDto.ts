@@ -1,4 +1,4 @@
-export interface Car{
+export interface CarDto{
     id:number;
     brandId:number;
     colorId:number;
