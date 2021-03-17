@@ -1,0 +1,64 @@
+<div style="text-align: center" aria-current="true" *ngIf="car">
+  <h3>{{ car.brandName }} {{ car.carName }}</h3>
+  <table class="table" *ngIf="car">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Açıklama</th>
+        <th>Marka</th>
+        <th>Renk</th>
+        <th>Model Yılı</th>
+        <th>Fiyat</th>
+      </tr>
+    </thead>
+    <tr>
+      <td>{{ car.id }}</td>
+      <td>{{ car.carName }}</td>
+      <td>{{ car.brandName }}</td>
+      <td>{{ car.colorName }}</td>
+      <td>{{ car.modelYear }}</td>
+      <td>{{ car.dailyPrice }}</td>
+    </tr>
+  </table>
+</div>
+<div class="container">
+  <div class="card-body">
+    <div
+      id="carouselExampleIndicators"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div
+          *ngFor="let carImage of carImages; let i = index"
+          [ngClass]="getSliderClassName(i)"
+        >
+          <img
+            src="{{ imagePath }}/{{ carImage.imagePath }}"
+            class="d-block w-100"
+            alt="{{ imagePath }}{{ carImage.imagePath }}"
+          />
+        </div>
+
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span>Geri</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
+          <span >İleri</span>
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>          
+        </button>
+      </div>      
+    </div>
+  </div>
+</div>

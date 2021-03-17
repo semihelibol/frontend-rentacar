@@ -1,5 +1,5 @@
-
-export interface ResponseModel {
-    message:string,
-    success:boolean
+export interface ResponseModel{
+    success:boolean,
+    message:string
 }
+
